@@ -26,7 +26,7 @@ export default {
             'sidebar-green': '#3f9a99',
             'main-color': '#048482',
             // rm detail
-            '': '#7f7f7f',
+
             'gray-brown-500': '#7f7f7f',
             'gray-brown-300': '#d4d9d9',
             'gray-brown-200': '#ebebeb',

@@ -22,6 +22,7 @@ class MenusTableSeeder extends Seeder
             ['title' => 'Delete Profile', 'icon' => 'M22 10.5h-6m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM4 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 10.374 21c-2.331 0-4.512-.645-6.374-1.766Z', 'link' => '/profile/delete', 'permission' => 'user', 'parent_id' => 4], // Submenu under Profile
             ['title' => 'บัญชีสาร (สากล)', 'icon' => 'M8.5 3.528v4.644c0 .729-.29 1.428-.805 1.944l-1.217 1.216a8.75 8.75 0 0 1 3.55.621l.502.201a7.25 7.25 0 0 0 4.178.365l-2.403-2.403a2.75 2.75 0 0 1-.805-1.944V3.528a40.205 40.205 0 0 0-3 0Zm4.5.084.19.015a.75.75 0 1 0 .12-1.495 41.364 41.364 0 0 0-6.62 0 .75.75 0 0 0 .12 1.495L7 3.612v4.56c0 .331-.132.649-.366.883L2.6 13.09c-1.496 1.496-.817 4.15 1.403 4.475C5.961 17.852 7.963 18 10 18s4.039-.148 5.997-.436c2.22-.325 2.9-2.979 1.403-4.475l-4.034-4.034A1.25 1.25 0 0 1 13 8.172v-4.56Z', 'link' => '/raw_material/global', 'permission' => 'user', 'parent_id' => 3],
             ['title' => 'บัญชีสาร (ในระบบ)', 'icon' => 'M2 4.25A2.25 2.25 0 0 1 4.25 2h11.5A2.25 2.25 0 0 1 18 4.25v8.5A2.25 2.25 0 0 1 15.75 15h-3.105a3.501 3.501 0 0 0 1.1 1.677A.75.75 0 0 1 13.26 18H6.74a.75.75 0 0 1-.484-1.323A3.501 3.501 0 0 0 7.355 15H4.25A2.25 2.25 0 0 1 2 12.75v-8.5Zm1.5 0a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 .75.75v7.5a.75.75 0 0 1-.75.75H4.25a.75.75 0 0 1-.75-.75v-7.5Z', 'link' => '/raw_material/global', 'permission' => 'user', 'parent_id' => 3],
+            ['title' => 'การจัดส่งเทสเตอร์', 'icon' => 'm20.772 10.156-1.368-4.105A2.995 2.995 0 0 0 16.559 4H7.441a2.995 2.995 0 0 0-2.845 2.051l-1.368 4.105A2.003 2.003 0 0 0 2 12v5c0 .753.423 1.402 1.039 1.743-.013.066-.039.126-.039.195V21a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2h12v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2.062c0-.069-.026-.13-.039-.195A1.993 1.993 0 0 0 22 17v-5c0-.829-.508-1.541-1.228-1.844zM4 17v-5h16l.002 5H4zM7.441 6h9.117c.431 0 .813.274.949.684L18.613 10H5.387l1.105-3.316A1 1 0 0 1 7.441 6z', 'link' => '/shipping_tester', 'permission' => 'user', 'parent_id' => null],
         ]);
 
         // Adding roles for menus
@@ -58,6 +59,8 @@ class MenusTableSeeder extends Seeder
             ['menus_id' => 4, 'roles_id' => null, 'company_id' => null, 'user_id' => null],
             ['menus_id' => 5, 'roles_id' => null, 'company_id' => null, 'user_id' => null],
             ['menus_id' => 6, 'roles_id' => null, 'company_id' => null, 'user_id' => null],
+
+            ['menus_id' => 9, 'roles_id' => 5, 'company_id' => null, 'user_id' => null],
         ]);
 
         // Note: The 'user_id' is null where the rule applies to all users within the role at a company.

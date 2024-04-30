@@ -228,3 +228,9 @@ label .close-btn {
     /* color: rgb(78, 78, 78); */
     /* Ensure the text is visible on a light background */
 }
+
+@layer base {
+    .st-status {
+        @apply w-10 h-10 mb-1
+    }
+}
