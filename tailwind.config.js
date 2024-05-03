@@ -25,11 +25,13 @@ export default {
             'headbar-green': '#038482',
             'sidebar-green': '#3f9a99',
             'main-color': '#048482',
+            'sub-color' : '#EDF5F5',
             // rm detail
 
             'gray-brown-500': '#7f7f7f',
             'gray-brown-300': '#d4d9d9',
             'gray-brown-200': '#ebebeb',
+            'gray-brown-50': '##FAFAFA',
 
             'pastel-300': '#ffc2b8',
             'pastel-600': '#fa9583',
@@ -37,6 +39,12 @@ export default {
 
             'green-tea-600': '#61d38e',
             'pigment-red-600': '#C70039',
+
+            //Shopping Tester
+            'status-red':'#FF6449',
+            'status-orange': '#FF912C',
+            'status-yellow':'#FFCE52',
+            'status-green':'#5DD28C',
 
 
           },

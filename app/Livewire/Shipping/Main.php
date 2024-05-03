@@ -7,8 +7,25 @@ use Livewire\Component;
 class Main extends Component
 {
     public $show = false;
-
+    public $tabType = 1;
+    public $statusTab = 0;
     public $stDetail = [];
+
+    public function changeTab($parem)
+    {
+
+        $this->tabType = $parem;
+
+        return $this->tabType;
+    }
+
+    public function changeStatusTab($parem)
+    {
+
+        $this->statusTab = $parem;
+
+        return $this->statusTab;
+    }
 
     public function getDetail($jsonValue)
     {
@@ -28,6 +45,19 @@ class Main extends Component
         return $this->stDetail;
     }
 
+    // For Modal
+    public $isOpen = false;
+
+    public function openModal()
+    {
+        $this->isOpen = true;
+    }
+
+    public function closeModal()
+    {
+        $this->isOpen = false;
+    }
+    // Data
     public function render()
     {
         $st_list = [
@@ -45,7 +75,7 @@ class Main extends Component
                 'status' => [
                     'id' => '1',
                     'name' => 'รายการใหม่',
-                    'color' => 'red-500',
+                    'color' => 'status-red',
                 ],
                 'address' => [
                     'id' => '1',
@@ -54,7 +84,7 @@ class Main extends Component
                     'tel' => '062-6533564',
                     'googleMaps' => 'https://maps.app.goo.gl/P37Ph4rXzpAqH4Mt8',
                 ],
-            ],[
+            ], [
                 'id' => 2,
                 'img' =>  'https://images.unsplash.com/photo-1608068811588-3a67006b7489?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'pr_name' => 'เซรั่มบำรุงขนตา',
@@ -68,7 +98,7 @@ class Main extends Component
                 'status' => [
                     'id' => '1',
                     'name' => 'รายการใหม่',
-                    'color' => 'red-500',
+                    'color' => 'status-red',
                 ],
                 'address' => [
                     'id' => '2',
@@ -77,7 +107,7 @@ class Main extends Component
                     'tel' => '087-8692413',
                     'googleMaps' => 'https://maps.app.goo.gl/P37Ph4rXzpAqH4Mt8',
                 ],
-            ],[
+            ], [
                 'id' => 3,
                 'img' =>  'https://images.unsplash.com/photo-1608068811588-3a67006b7489?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'pr_name' => 'ครีมบำรุงผิวนมแพะ',
@@ -91,7 +121,7 @@ class Main extends Component
                 'status' => [
                     'id' => '2',
                     'name' => 'เตรียมจัดส่ง',
-                    'color' => 'orange-500',
+                    'color' => 'status-orange',
                 ],
                 'address' => [
                     'id' => '1',
@@ -100,7 +130,7 @@ class Main extends Component
                     'tel' => '062-6533564',
                     'googleMaps' => 'https://maps.app.goo.gl/P37Ph4rXzpAqH4Mt8',
                 ],
-            ],[
+            ], [
                 'id' => 4,
                 'img' =>  'https://images.unsplash.com/photo-1608068811588-3a67006b7489?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'pr_name' => 'อาหารเสริมบำรุงเส้นผมและเล็บ',
@@ -114,7 +144,7 @@ class Main extends Component
                 'status' => [
                     'id' => '2',
                     'name' => 'เตรียมจัดส่ง',
-                    'color' => 'orange-500',
+                    'color' => 'status-orange',
                 ],
                 'address' => [
                     'id' => '3',
@@ -123,7 +153,7 @@ class Main extends Component
                     'tel' => '095-8674286',
                     'googleMaps' => 'https://maps.app.goo.gl/P37Ph4rXzpAqH4Mt8',
                 ],
-            ],[
+            ], [
                 'id' => 5,
                 'img' =>  'https://images.unsplash.com/photo-1608068811588-3a67006b7489?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'pr_name' => 'ครีมกันแดดซันบล็อก',
@@ -137,7 +167,7 @@ class Main extends Component
                 'status' => [
                     'id' => '3',
                     'name' => 'กำลังจัดล่ง',
-                    'color' => 'yellow-600',
+                    'color' => 'status-yellow',
                 ],
                 'address' => [
                     'id' => '2',
@@ -146,7 +176,7 @@ class Main extends Component
                     'tel' => '087-8692413',
                     'googleMaps' => 'https://maps.app.goo.gl/P37Ph4rXzpAqH4Mt8',
                 ],
-            ],[
+            ], [
                 'id' => 6,
                 'img' =>  'https://images.unsplash.com/photo-1608068811588-3a67006b7489?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'pr_name' => 'เซรั่มบำรุงเล็บ',
@@ -160,7 +190,7 @@ class Main extends Component
                 'status' => [
                     'id' => '4',
                     'name' => 'จัดส่งแล้ว',
-                    'color' => 'green-tea-600',
+                    'color' => 'status-green',
                 ],
                 'address' => [
                     'id' => '1',
@@ -171,9 +201,13 @@ class Main extends Component
                 ],
             ]
         ];
-        return view('livewire.shipping.main',[
+        return view('livewire.shipping.main', [
             'st_list' => $st_list,
             'stDetail' => $this->stDetail,
+            'tabType' => $this->tabType,
+            'statusTab' => $this->statusTab,
+            'isOpen' => $this->isOpen,
+
         ]);
     }
 }

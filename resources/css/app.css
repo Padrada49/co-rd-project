@@ -233,4 +233,10 @@ label .close-btn {
     .st-status {
         @apply w-10 h-10 mb-1
     }
+    .st-detail1 {
+        @apply py-2 text-main-color fill-pastel-600 flex flex-row gap-4
+    }
+    .dd-menu{
+        @apply my-4 text-main-color  hover:bg-pastel-300 
+    }
 }
